@@ -85,4 +85,11 @@ public class UserDetailDaoImpl implements UsersDetailDao{
         return (UsersDetail) query.uniqueResult();
     }
 
+
+	@Override
+	public boolean isValidUser(String name, String password, boolean b) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
 }

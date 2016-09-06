@@ -1,7 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+
+<!DOCTYPE html >
 
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
@@ -22,15 +25,15 @@
     
     <!-- CSS
   ================================================== -->
-  	<link rel="stylesheet" href="<c:url value="/resources/css/zerogrid.css"/>">
-	<link rel="stylesheet" href="<c:url value="/resources/css/style.css"/>">
-	<link rel="stylesheet" href="<c:url value="/resources/css/menu.css"/>">
-	<link rel="stylesheet" href="<c:url value="/resources/css/lightbox.css"/>">
-	<link href="<c:url value="/resources/font-awesome/css/font-awesome.min.css"/>" rel="stylesheet" type="text/css"/>
-	
-	
+  	<link rel="stylesheet" href="<c:url value="/resources/css/zerogrid.css"/>"/>
+	<link rel="stylesheet" href="<c:url value="/resources/css/style.css"/>"/>
+	<link rel="stylesheet" href="<c:url value="/resources/css/menu.css"/>"/>
+	<link rel="stylesheet" href="<c:url value="/resources/css/lightbox.css"/>"/>
+	<link href="<c:url value="/resources/font-awesome/css/font-awesome.min.css"/>" rel="stylesheet" type="text/css">
+		
 	<script src="<c:url value="/resources/js/jquery1111.min.js"/>" type="text/javascript"></script>
 	<script src="<c:url value="/resources/js/script.js"/>"> </script>
+	
 	
 	<!--[if lt IE 8]>
        <div style=' clear: both; text-align:center; position: relative;'>
@@ -52,20 +55,8 @@
 <header >
 	<div class="zerogrid">
 		<div class="wrap-header">
-			<div class="logo t-center"><a href="index.html"><img  src="<c:url value ="/resources/images/logo.jpg"/>"/></a>
+			<div class="logo t-center"><a href="index.html"><img  src="<c:url value ="/resources/images/logo.jpg"/>"/></a></div>
 	
-	
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
    <c:if test="${pageContext.request.userPrincipal.name != null}">
 <c:if test="${pageContext.request.userPrincipal.name != 'prasanna'}">
 <a href="<c:url value="/user/cart" />">Cart</a>
@@ -77,11 +68,7 @@
 <a>Hello, ${pageContext.request.userPrincipal.name}</a>
 <a href="<c:url value="/j_spring_security_logout" />">Sign Out</a>
  </c:if>​
-
- 
- 
- 
-			</div>	
+				
 			<div id='cssmenu' class="align-center">
 				<ul>
 				   <li class="active"><a href='index.html'><span>zFurniture</span></a></li>
@@ -122,6 +109,7 @@
 						<div class="wrap-col item">
 							<div class="zoom-container">
 								<img src="<c:url value ="/resources/images/banner-img3.jpg"/>" />
+								
 							</div>
 							<div class="item-content">
 								<h3 class="item-header"><a href="#">BASIC FURNITURE</a></h3>
@@ -173,8 +161,8 @@
 					<div class="row">
 						<div class="col-1-4">
 							<div class="wrap-col">
-								<a class="example-image-link" href="<c:url value="/resources/images/4.jpg"/>" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
-									<div class="zoom-container">
+								<a class="example-image-link" href="<c:url value="/resources/images/4.jpg"/>" data-lightbox="example-set" data-title="Click the right half of the image to move forward."/>
+									 <div class="zoom-container"> 
 										<div class="zoom-caption">
 											<div class="caption-inner">
 												<div class="caption-inner1">
@@ -206,7 +194,7 @@
 												</div>
 											</div>
 										</div>
-										<img class="example-image" src="<c:url value ="/resources/images/6.jpg"/>"/> 
+										<img  class="example-image-link" src="<c:url value ="/resources/images/6.jpg"/>"/> 
 									</div>
 								</a>
 							</div>
@@ -222,7 +210,9 @@
 												</div>
 										</div>
 										</div>
-										<img class="example-image" src="<c:url value ="/resources/images/7.jpg"/>"/> 
+										
+										
+										 <img class="example-image" src="<c:url value ="/resources/images/7.jpg"/>"/> 
 									</div>
 								</a>
 								<a class="example-image-link" href="<c:url value="/resources/images/8.jpg"/>" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">

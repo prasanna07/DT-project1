@@ -10,24 +10,28 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.niit.dao.CategoryDAO;
-import com.niit.model.Category;
+import com.niit.shopingcart.dao.CategoryDAO;
+import com.niit.shopingcart.model.Category;
+import com.niit.util.Util;
 
 @Controller
 public class CategoryController {
 	
+	@Autowired
 	private CategoryDAO categoryDAO;
+	@Autowired
+	private Category category;
 	
 	@Autowired(required=true)
 	@Qualifier(value="categoryDAO")
-	public void setCategoryDAO(CategoryDAO ps){
-		this.categoryDAO = ps;
+	public void setCategoryDAO(CategoryDAO categoryDAO){
+		this.categoryDAO = categoryDAO;
 	}
 	
 	@RequestMapping(value = "/categories", method = RequestMethod.GET)
-	public String listCategorys(Model model) {
-		model.addAttribute("category", new Category());
-		model.addAttribute("categoryList", this.categoryDAO.list());
+	public String listCategories(Model model) {
+		model.addAttribute("category",  category);
+		model.addAttribute("categoryList", categoryDAO.list());
 		return "category";
 	}
 	
@@ -35,8 +39,9 @@ public class CategoryController {
 	@RequestMapping(value= "/category/add", method = RequestMethod.POST)
 	public String addCategory(@ModelAttribute("category") Category category){
 		
-	
-			categoryDAO.saveOrUpdate(category);
+		String newID=Util.removeComma(category.getId());
+		category.setId(newID);
+		categoryDAO.saveOrUpdate(category);
 		
 		return "redirect:/categories";
 		

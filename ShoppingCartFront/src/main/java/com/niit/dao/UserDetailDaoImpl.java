@@ -86,10 +86,8 @@ public class UserDetailDaoImpl implements UsersDetailDao{
     }
 
 
-	@Override
-	public boolean isValidUser(String name, String password, boolean b) {
-		// TODO Auto-generated method stub
-		return false;
-	}
+
+
+	
 
 }

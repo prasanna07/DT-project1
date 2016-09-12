@@ -15,14 +15,10 @@ public interface UsersDetailDao {
 
     UsersDetail getUserByUsername (String username);
     
-    public UsersDetail isValidUser(String id, String password);
+   // public UsersDetail isValidUser(String id, String password);
 
-	public static void saveOrUpdate(UsersDetail userDetails) {
-		// TODO Auto-generated method stub
-		
-	}
+	
 
-	public boolean isValidUser(String name, String password, boolean b);
-
+	
 
 }

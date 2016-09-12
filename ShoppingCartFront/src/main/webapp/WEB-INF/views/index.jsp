@@ -35,13 +35,13 @@
 	<script src="<c:url value="/resources/js/script.js"/>"> </script>
 	
 	
-	<!--[if lt IE 8]>
-       <div style=' clear: both; text-align:center; position: relative;'>
+	
+      <!--  <div style=' clear: both; text-align:center; position: relative;'>
          <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
            <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
         </a>
-      </div>
-    <![endif]-->
+      </div> -->
+    
     <!--[if lt IE 9]>
 		<script src="<c:url value="/resources/js/html5.js"/>"></script>
 		<script src="<c:url value="/resources/js/css3-mediaqueries.js"/>"></script>
@@ -154,177 +154,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="content-box box-3 box-style-1"><!--Start Box-->
-			<div class="zerogrid">
-				<div class="row">
-					<h2 class="header t-center">Our Apartments</h2>
-					<div class="row">
-						<div class="col-1-4">
-							<div class="wrap-col">
-								<a class="example-image-link" href="<c:url value="/resources/images/4.jpg"/>" data-lightbox="example-set" data-title="Click the right half of the image to move forward."/>
-									 <div class="zoom-container"> 
-										<div class="zoom-caption">
-											<div class="caption-inner">
-												<div class="caption-inner1">
-													<i class="fa fa-eye"></i>
-												</div>
-											</div>
-										</div>
-										<img class="example-image" src="<c:url value="/resources/images/4.jpg" />"/>
-									</div>
-								</a>
-								<a class="example-image-link" href="<c:url value="/resources/images/5.jpg"/>" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
-									<div class="zoom-container">
-										<div class="zoom-caption">
-											<div class="caption-inner">
-												<div class="caption-inner1">
-													<i class="fa fa-eye"></i>
-												</div>
-											</div>
-										</div>
-										<img class="example-image" src="<c:url value ="/resources/images/5.jpg"/>"/> 
-									</div>
-								</a>
-								<a class="example-image-link" href="<c:url value="/resources/images/.jpg"/>" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
-									<div class="zoom-container">
-										<div class="zoom-caption">
-											<div class="caption-inner">
-												<div class="caption-inner1">
-													<i class="fa fa-eye"></i>
-												</div>
-											</div>
-										</div>
-										<img  class="example-image-link" src="<c:url value ="/resources/images/6.jpg"/>"/> 
-									</div>
-								</a>
-							</div>
-						</div>
-						<div class="col-1-4">
-							<div class="wrap-col">
-								<a class="example-image-link" href="<c:url value ="/resources/images/7.jpg"/>" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
-									<div class="zoom-container">
-										<div class="zoom-caption">
-											<div class="caption-inner">
-												<div class="caption-inner1">
-													<i class="fa fa-eye"></i>
-												</div>
-										</div>
-										</div>
-										
-										
-										 <img class="example-image" src="<c:url value ="/resources/images/7.jpg"/>"/> 
-									</div>
-								</a>
-								<a class="example-image-link" href="<c:url value="/resources/images/8.jpg"/>" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
-									<div class="zoom-container">
-										<div class="zoom-caption">
-											<div class="caption-inner">
-												<div class="caption-inner1">
-													<i class="fa fa-eye"></i>
-												</div>
-											</div>
-										</div>
-										<img class="example-image" src="<c:url value ="/resources/images/8.jpg"/>"/> 
-									</div>
-								</a>
-								<a class="example-image-link" href="<c:url value="/resources/images/9.jpg"/>" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
-									<div class="zoom-container">
-										<div class="zoom-caption">
-											<div class="caption-inner">
-												<div class="caption-inner1">
-													<i class="fa fa-eye"></i>
-												</div>
-											</div>
-										</div>
-										<img class="example-image" src="<c:url value ="/resources/images/9.jpg"/>"/> 
-									</div>
-								</a>
-							</div>
-						</div>
-						<div class="col-1-4">
-							<div class="wrap-col">
-								<a class="example-image-link" href="<c:url value="/resources/images/4.jpg"/>" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
-									<div class="zoom-container">
-										<div class="zoom-caption">
-											<div class="caption-inner">
-												<div class="caption-inner1">
-													<i class="fa fa-eye"></i>
-												</div>
-											</div>
-										</div>
-										<img class="example-image" src="<c:url value ="/resources/images/4.jpg"/>"/> 
-									</div>
-								</a>
-								<a class="example-image-link" href="<c:url value="/resources/images/5.jpg"/>" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
-									<div class="zoom-container">
-										<div class="zoom-caption">
-											<div class="caption-inner">
-												<div class="caption-inner1">
-													<i class="fa fa-eye"></i>
-												</div>
-											</div>
-										</div>
-										<img class="example-image" src="<c:url value ="/resources/images/5.jpg"/>"/> 
-									</div>
-								</a>
-								<a class="example-image-link" href="<c:url value="/resources/images/6.jpg"/>" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
-									<div class="zoom-container">
-										<div class="zoom-caption">
-											<div class="caption-inner">
-												<div class="caption-inner1">
-													<i class="fa fa-eye"></i>
-												</div>
-											</div>
-										</div>
-										<img class="example-image" src="<c:url value ="/resources/images/6.jpg"/>"/> 
-									</div>
-								</a>
-							</div>
-						</div>
-						<div class="col-1-4">
-							<div class="wrap-col">
-								<a class="example-image-link" href="<c:url value="/resources/images/7.jpg"/>" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
-									<div class="zoom-container">
-										<div class="zoom-caption">
-											<div class="caption-inner">
-												<div class="caption-inner1">
-													<i class="fa fa-eye"></i>
-												</div>
-											</div>
-										</div>
-										<img class="example-image" src="<c:url value ="/resources/images/7.jpg"/>"/> 
-									</div>
-								</a>
-								<a class="example-image-link" href="<c:url value="/resources/images/8.jpg"/>" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
-									<div class="zoom-container">
-										<div class="zoom-caption">
-											<div class="caption-inner">
-												<div class="caption-inner1">
-													<i class="fa fa-eye"></i>
-												</div>
-											</div>
-										</div>
-										<img class="example-image" src="<c:url value ="/resources/images/8.jpg"/>"/>
-									</div>
-								</a>
-								<a class="example-image-link" href="<c:url value="/resources/images/9.jpg"/>" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
-									<div class="zoom-container">
-										<div class="zoom-caption">
-											<div class="caption-inner">
-												<div class="caption-inner1">
-													<i class="fa fa-eye"></i>
-												</div>
-											</div>
-										</div>
-										<img class="example-image" src="<c:url value ="/resources/images/9.jpg"/>"/> 
-									</div>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+		
 		<section class="content-box box-4 box-style-3"><!--Start Box-->
 			<div class="zerogrid">
 				<div class="row">

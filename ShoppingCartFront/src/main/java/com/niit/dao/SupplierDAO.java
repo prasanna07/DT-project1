@@ -1,4 +1,4 @@
-package com.niit.dao;
+/*package com.niit.dao;
 
 import java.util.List;
 
@@ -14,7 +14,7 @@ public interface SupplierDAO {
 
 	public Supplier getByName(String name);
 
-	public void saveOrUpdate(Supplier supplier);
+	public boolean saveOrUpdate(Supplier supplier);
 
 	public String delete(String supplier);
 
@@ -22,3 +22,4 @@ public interface SupplierDAO {
 
 
 }
+*/

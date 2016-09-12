@@ -1,4 +1,4 @@
-package com.niit.model;
+/*package com.niit.model;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -9,6 +9,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import org.springframework.stereotype.Component;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.niit.model.Category;
 import com.niit.model.Supplier;
@@ -86,9 +87,14 @@ public class Product {
 	public void setPrice(double price) {
 		this.price = price;
 	}
+	public MultipartFile getItemImage() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 
 		
 	}
 	
 
+*/

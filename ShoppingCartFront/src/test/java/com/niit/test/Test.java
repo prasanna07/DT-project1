@@ -1,12 +1,13 @@
-package com.niit.test;
+/*package com.niit.test;
 
 import java.util.List;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import com.niit.shopingcart.dao.CategoryDAO;
+import com.niit.shopingcart.model.Category;
 
-import com.niit.dao.CategoryDAO;
-import com.niit.model.Category;
+
 
 public class Test {
 
@@ -28,13 +29,13 @@ AnnotationConfigApplicationContext context = new AnnotationConfigApplicationCont
 		context.refresh();
 		
 		CategoryDAO categoryDAO = (CategoryDAO) context.getBean("categoryDAO");
-	/*	
+		
 		Category c = new Category();
 		c.setId("MOB_001");
 		c.setName("Mobile");
 		c.setDescription("mobile product");
 		categoryDAO.saveOrUpdate(c);
-*/
+
 		List<Category> list =  categoryDAO.list();
 		
 		display(list);
@@ -43,3 +44,4 @@ AnnotationConfigApplicationContext context = new AnnotationConfigApplicationCont
 
 }
 
+*/

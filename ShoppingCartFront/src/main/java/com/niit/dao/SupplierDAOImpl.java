@@ -1,4 +1,4 @@
-package com.niit.dao;
+/*package com.niit.dao;
 
 
 import java.util.List;
@@ -37,8 +37,19 @@ public class SupplierDAOImpl implements SupplierDAO {
 	}
 
 	@Transactional
-	public void saveOrUpdate(Supplier supplier) {
-		sessionFactory.openSession().saveOrUpdate(supplier);
+	public boolean saveOrUpdate(Supplier supplier) {
+		
+		System.out.println("inside saveOrUpdate");
+		try {
+			sessionFactory.openSession().save(supplier);
+			return true;
+		} catch (HibernateException e) {
+			e.printStackTrace();
+			return false;
+		}
+		
+		//sessionFactory.openSession().save(supplier);
+		//sessionFactory.openSession().flush();
 	}
 
 	@Transactional
@@ -96,3 +107,4 @@ public class SupplierDAOImpl implements SupplierDAO {
 	}
 
 }
+*/

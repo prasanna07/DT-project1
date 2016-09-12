@@ -4,6 +4,9 @@
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/test/java"/>
+        <dependent-module archiveName="ShopingCartBackEnd-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/ShopingCartNew/ShopingCartNew">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="context-root" value="ShoppingCartFront"/>
         <property name="java-output-path" value="/ShoppingCartFront/target/classes"/>
     </wb-module>

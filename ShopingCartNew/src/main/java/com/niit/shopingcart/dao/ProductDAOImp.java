@@ -9,8 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-
-
+import com.niit.shopingcart.model.Category;
 import com.niit.shopingcart.model.Product;
 
 @Repository("productDAO")
@@ -61,6 +60,23 @@ public class ProductDAOImp implements ProductDAO {
 		
 		return null;
 	}
+	
+	
+	@Transactional
+	public Product getByName(String name) {
+		String hql = "from Product where name='" + name+"'";
+		Query query = sessionFactory.getCurrentSession().createQuery(hql);
+		System.out.println("Inside productDAO get");
+		@SuppressWarnings("unchecked")
+		List<Product> listProduct = (List<Product>) query.list();
+		
+		if (listProduct != null && !listProduct.isEmpty()) {
+			return listProduct.get(0);
+		}
+		
+		return null;
+	}
+
 
 	public boolean delete(Product product) {
 		try{
@@ -85,11 +101,7 @@ public class ProductDAOImp implements ProductDAO {
 			return true;
 		}catch(Exception e){
 		// TODO Auto-generated method stub
-			e.printStackTrace();
-			
-			
-			
-			
+			e.printStackTrace();	
 		return false;
 		}
 	}

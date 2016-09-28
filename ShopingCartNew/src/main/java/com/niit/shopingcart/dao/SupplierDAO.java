@@ -20,5 +20,7 @@ public interface SupplierDAO {
 
 	public boolean add(Supplier supplier);
 
+	public void delete(String id);
+
 
 }

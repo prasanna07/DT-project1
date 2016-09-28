@@ -22,7 +22,7 @@
 	word-break: normal;
 	border-color: #ccc;
 	color: #333;
-	background-color: #fff;
+	 background-color: #b29d85;
 }
 
 .tg th {
@@ -36,12 +36,22 @@
 	word-break: normal;
 	border-color: #ccc;
 	color: #333;
-	background-color: #f0f0f0;
+	
+	background-color: #8FBC8F;
 }
 
 .tg .tg-4eph {
-	background-color: #f9f9f9
+	background-color: #800080;
 }
+
+body{
+/* background-color:rgb(160,160,160)}
+ */
+    
+       background-image: url("resources/images/images3.jpg");
+ }
+ 
+
 </style>
 </head>
 <body>

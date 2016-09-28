@@ -34,6 +34,8 @@ public class CategoryController {
 		model.addAttribute("categoryList", categoryDAO.list());
 		return "category";
 	}
+
+	
 	
 	//For add and update category both
 	@RequestMapping(value= "/category/add", method = RequestMethod.POST)

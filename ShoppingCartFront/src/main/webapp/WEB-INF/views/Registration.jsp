@@ -10,7 +10,70 @@
 <!--[if IE 8 ]>    <html lang="en" class="no-js ie8 lt8"> <![endif]-->
 <!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
-    <head>
+<head>
+<style>
+form {
+    border: 200px solid #f1f1f1;
+}
+
+input[type=text], input[type=password] {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 5px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 20%;
+}
+
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+    width: 20%;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 5px 0 5px 0;
+}
+
+img.avatar {
+    width: 20%;
+    border-radius: 20%;
+}
+
+.container {
+    padding: 10px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 5px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 100px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 10%;
+    }
+}
+</style>
+</head>
+   <%--  
         <meta charset="UTF-8" />
         <title>Registration Form </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
@@ -22,22 +85,20 @@
         <link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/demo.css" />"/>
         <link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/style.css" />"/>
 		<link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/animate-custom.css" />"/>
-    </head>
-    <body>
+   <style>
+   body {
+     
+       background-image: url("resources/images/images2.jpg");
+ }
+   
+   </style>
+  
+    
+   --%>
+   
+     <body>
            
-            <header>
-            
-            <div class="span9 margin-top">
-		<div class="span9 center margin-bottom">
-		<div class="wrap-header">
-		<div class="span8 center">
-			<div class="logo t-center"><a href="index.html"><img  src="<c:url value ="/resources/images/logo2.jpg"/>"/></a></div>
-			</div>
-				</div>
-				</div>
-				</div>
-            </header>
-           			
+           	<br><br><br><br>	
                 <div id="container_demo" >
                     <a class="hiddenanchor" id="toregistration"></a>
                     <div id="wrapper">
@@ -46,21 +107,27 @@
 
         <form:form action="registration" method="post" commandName="usersDetail">
 				    
+			<div class="imgcontainer">
+    <img src="<c:url value="resources/images/person.jpg"/>" alt="Avatar" class="avatar"/>
+  </div></center>
+ 	    
 				     <div class="span9 margin-top">
                    <div class="span9 center margin-bottom">          
-					<h3>Registration </h3>
+		<center>		<b>	<h2 style="color:red;"><u>Registration </u></h2></b></center>
+		
+		
 					</div>
-				   <br>
+				   <br><center>
 					  <div class="control-group">
 						<label class="control-label">Name</label>
 						<form:errors path="userFullName" cssStyle="color: #ff0000"/>
 						<div class="controls docs-input-sizes">
             				<form:input path="userFullName" id="fullname" class="form-Control"/>
 						</div>
-					  </div>
+					  </div></center>
 					  
 					  
-					  
+					  <center>
 					  <div class="control-group">
 						<label class="control-label">Email</label>
 							<span style="color: #ff0000">${emailMsg}</span>
@@ -69,17 +136,17 @@
 						  <form:input path="userEmail" id="email" class="form-Control"/>
 							</div>
 					  </div>			
-					  		  
-					  		  
+					  		  </center>
+					  <center>		  
 					  <div class="control-group">
 						<label class="control-label">Phone</label>
 						<div class="controls docs-input-sizes">
 						  <form:input path="userPhone" id="phone" class="form-Control"/>
 						</div>
 					  </div>
+					  </center>
 					  
-					  
-					  
+					  <center>
 					<div class="control-group">
 						<label class="control-label">Username</label>
 						<span style="color: #ff0000">${usernameMsg}</span>
@@ -88,8 +155,8 @@
 						  <form:input path="Username" id="username" class="form-Control"/>
 						</div>
 					  </div>
-					  
-					  
+					  </center>
+					  <center>
 						<div class="control-group">
 						<label class="control-label">Password</label>
 						<form:errors path="password" cssStyle="color: #ff0000"/>
@@ -97,7 +164,7 @@
 						  <form:password path="password" id="password" class="form-Control"/>
 						</div>
 					  </div>	
-					  					  
+					  			</center>		  
 				   </div>
 				   
 					<%--  <div class="span3">
@@ -194,18 +261,18 @@
 					   <br>
 					  <br>
 					  <br>
-					   <p class="submit button"> 
+					   <!-- <p class="submit button"> 
                                 
                                     <input type="submit" value="submit" /> 
 								</p>
-					
-						<br>
-						
-						 <p class="cancel button">
-								    <input type="cancel" value="cancel"/>
-								   
-							    </p>	 
-					
+					 -->
+					 <center>     
+    <button type="submit">Submit</button>
+    <!-- <input type="checkbox" checked="checked"> Remember me
+   --></div>
+</center>
+    </div>							 
+		<br>								
 			 </form:form> 
 
                         

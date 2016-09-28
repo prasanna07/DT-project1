@@ -44,7 +44,7 @@ public class CategoryDAOImpl implements CategoryDAO {
 		Category CategoryToDelete = new Category();
 		CategoryToDelete.setId(id);
 		sessionFactory.getCurrentSession().delete(CategoryToDelete);
-		return false;
+		return true;
 	}
 
 	@Transactional

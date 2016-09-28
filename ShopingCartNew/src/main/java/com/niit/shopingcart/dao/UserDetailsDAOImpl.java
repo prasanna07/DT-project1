@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.niit.shopingcart.model.User;
 import com.niit.shopingcart.model.UserDetails;
 import com.niit.shopingcart.model.shipping;
 
@@ -88,6 +89,12 @@ public class UserDetailsDAOImpl implements UserDetailsDAO {
 	public String delete(UserDetails userDetails) {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	public void saveorUpdate(User user) {
+		// TODO Auto-generated method stub
+		sessionFactory.getCurrentSession().saveOrUpdate(user);
+
 	}
 
 }

@@ -1,7 +1,8 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
-
+<%-- <%@include file="/WEB-INF/views/Adminpage.jsp" %>
+ --%>
 <html>
 <head>
 <title>Product Page</title>
@@ -22,7 +23,7 @@
 	word-break: normal;
 	border-color: #ccc;
 	color: #333;
-	background-color: #fff;
+	 background-color: #b29d85;
 }
 
 .tg th {
@@ -36,12 +37,22 @@
 	word-break: normal;
 	border-color: #ccc;
 	color: #333;
-	background-color: #f0f0f0;
+	
+	background-color: #8FBC8F;
 }
 
 .tg .tg-4eph {
-	background-color: #f9f9f9
+	background-color: #800080;
 }
+
+body{
+/* background-color:rgb(160,160,160)}
+ */
+    
+       background-image: url("resources/images/images3.jpg");
+ }
+ 
+
 </style>
 </head>
 <body>
@@ -140,8 +151,10 @@
 
 
 	
-	<c:if test="${!empty productList}">
-	<h3>Product List</h3>
+	 
+	 <h3>Product List</h3>
+	 <c:if test="${!empty productList}">
+	
 		<table class="tg">
 			<tr>
 				<th width="80">Product ID</th>
@@ -169,6 +182,6 @@
 				</tr>
 			</c:forEach>
 		</table>
-	</c:if>
+	</c:if> 
 </body>
 </html>

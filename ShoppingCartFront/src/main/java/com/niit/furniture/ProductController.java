@@ -1,7 +1,6 @@
 package com.niit.furniture;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
@@ -10,9 +9,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import org.springframework.web.bind.annotation.RequestParam;
-
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.niit.shopingcart.dao.CategoryDAO;
 import com.niit.shopingcart.dao.ProductDAO;
@@ -60,9 +58,12 @@ public class ProductController {
 
 	@RequestMapping(value = "/products", method = RequestMethod.GET)
 	public String listProducts(Model model) {
+		model.addAttribute("isAdminClickedProducts", "true");
 		model.addAttribute("product",  product);
 		model.addAttribute("productList", this.productDAO.list());
 		model.addAttribute("Category", category);
+		model.addAttribute("Supplier", supplier);
+		
 		model.addAttribute("supplierList", this.supplierDAO.list());
 		model.addAttribute("categoryList", this.categoryDAO.list());
 		
@@ -99,18 +100,20 @@ public class ProductController {
 		productDAO.saveOrUpdate(product);
 
 		MultipartFile itemImage =  product.getItemImage();
-        String rootDirectory = request.getSession().getServletContext().getRealPath("/");
-        path = Paths.get(rootDirectory + "\\WEB-INF\\resources\\images\\"+product.getId()+".png");
-
-
+        //String rootDirectory = request.getSession().getServletContext().getRealPath("/");
+       // path = Paths.get( "E:\\workspace\\ShoppingCartFront\\src\\main\\webapp\\WEB-INF\\resources\\images\\"+product.getId()+".png");
+        path = Paths.get("E:\\workspace\\ShoppingCartFront\\src\\main\\webapp\\WEB-INF\\resources\\images\\" + product.getId() + ".png");
+		
+		
         if (itemImage != null && !itemImage.isEmpty()) {
             try {
-          
+            	System.out.println("inside try");
+				
             itemImage.transferTo(new File(path.toString()));
             } catch (Exception e) {
                 e.printStackTrace();
-                throw new RuntimeException("item image saving failed.", e);
-            }
+                throw new RuntimeException("product image saving failed.", e);
+			}
         }
 
         return "redirect:/products";
@@ -124,7 +127,7 @@ public class ProductController {
 		try {
 			
 			productDAO.delete(id);
-			model.addAttribute("message", "Successfully Added");
+			model.addAttribute("message", "Successfully deleted");
 		} catch (Exception e) {
 			model.addAttribute("message", e.getMessage());
 			e.printStackTrace();
@@ -145,5 +148,21 @@ public class ProductController {
 		model.addAttribute("listProducts", this.productDAO.list());
 		return "product";
 	}
+	
+	@RequestMapping("product/get/{id}")
+	public String getSelectedProduct(@PathVariable("id") String id, Model model,RedirectAttributes redirectAttributes) {
+		//System.out.println("getSelectedProduct");
+
+		//model.addAttribute("productList", this.productDAO.list());
+		
+		 redirectAttributes.addFlashAttribute("selectedProduct", this.productDAO.get(id));
+		
+		
+		/*model.addAttribute("selectedProduct", this.productDAO.get(id));
+		model.addAttribute("categoryList", this.categoryDAO.list());
+	*/
+		 return "redirect:/";
+			}
+	
 }
 
